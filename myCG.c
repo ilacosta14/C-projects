@@ -1,7 +1,6 @@
 Uint CG(Sfield out, void (*op)(Sfield, Sfield), Sfield in, int size) {
     // Maximum number of iterations is defined in the code as CG_max_iter
-    Scalar this_tol = CG_tolerance // Tolerance for convergence. Johannes used a somewhat more complicated definition. 
-                                    // but I think that for the moment I can keep it like this
+    Scalar this_tol = CG_tolerance // Tolerance for convergence.
 
     // r is the residual: r = b - A*x
     Sfield r= new_Sfield(), p= new_Sfield(), Ap= new_Sfield();
